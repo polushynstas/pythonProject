@@ -1,7 +1,7 @@
 def analyze_input(input_str):
     exit_phrases = ["вихід", "exit", "quit", "e", "q"]
     if input_str.lower() in exit_phrases:
-        return "Ви ввели ключову фразу для виходу."
+        quit()
 
     input_str = input_str.strip()
     if not input_str:
