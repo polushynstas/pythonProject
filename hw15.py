@@ -12,8 +12,8 @@ def analyze_input(input_str):
 
     if input_str[0] == '-' and input_str[1:].isdigit():
         return f"Ви ввели від'ємне ціле число:{input_str}"
-    if '.' in input_str:
-        parts = input_str.split('.')
+    if '.' in input_str or ',' in input_str:
+        parts = input_str.replace(',', '.').split('.')
         if len(parts) == 2 and (parts[0].isdigit() or (parts[0].startswith('-') and parts[0][1:].isdigit())) and parts[
             1].isdigit():
             if input_str.startswith('-'):
