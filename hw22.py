@@ -18,7 +18,7 @@ class Auto:
         self.age += 1
 
 class Truck(Auto):
-    def __init__(self, brand, age, mark, color, weight, max_load=4000):
+    def __init__(self, brand, age, mark, color, weight, max_load):
         super().__init__(brand, age, mark, color, weight)
         self.max_load = max_load
 
@@ -32,7 +32,7 @@ class Truck(Auto):
         time.sleep(1)
 
 class Car(Auto):
-    def __init__(self, brand, age, mark, color, weight, max_speed=1):
+    def __init__(self, brand, age, mark, color, weight, max_speed):
         super().__init__(brand, age, mark, color, weight)
         self.max_speed = max_speed
 
