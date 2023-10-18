@@ -11,10 +11,11 @@ class Person:
 
     def parse_date(self, date_str):
         if date_str:
-            formats = ["%d.%m.%Y", "%d %m %Y", "%d-%m-%Y"]
-            for fmt in formats:
+            cleaned_date_str = date_str.replace(" ", ".").replace("-", ".").replace(",", ".").replace("/", ".")
+            formats = ["%d.%m.%Y"]
+            for format in formats:
                 try:
-                    return datetime.strptime(date_str,fmt).date()
+                    return datetime.strptime(cleaned_date_str, format).date()
                 except ValueError:
                     pass
         return None
